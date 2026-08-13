@@ -22,6 +22,9 @@ builder.Services.AddAuthorization();
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddScoped<ICompanyService, CompanyService>();
 
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+
 
 
 builder.Services.AddScoped<ITokenService, TokenService>();
