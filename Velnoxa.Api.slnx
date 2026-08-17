@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Velnoxa.Api/Velnoxa.Api.csproj" />
+  <Project Path="Velnoxa.Application/Velnoxa.Application.csproj" />
+  <Project Path="Velnoxa.Domain/Velnoxa.Domain.csproj" />
+  <Project Path="Velnoxa.Infrastructure/Velnoxa.Infrastructure.csproj" />
+  <Project Path="Velnoxa.Shared/Velnoxa.Shared.csproj" />
+  <Project Path="Velnoxa.Tests/Velnoxa.Tests.csproj" />
+</Solution>
