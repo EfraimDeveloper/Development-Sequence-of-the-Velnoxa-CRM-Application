@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Velnoxa.Domain.Entities;
+using Velnoxa.Application.DTOs;
 
 namespace Velnoxa.Application.Interfaces
 {
-    public interface IWhatsAppAccountRepository
+    public interface IWhatsAppAccountService
     {
-        Task AddAsync(WhatsAppccount account);
-        
+        Task<WhatsAppccount>CreateAsync(CreateWhatsAppAccountDto dto);
+
         Task<IEnumerable<WhatsAppccount>> GetAllAsync();
 
         Task<WhatsAppccount?> GetByIdAsync(Guid id);

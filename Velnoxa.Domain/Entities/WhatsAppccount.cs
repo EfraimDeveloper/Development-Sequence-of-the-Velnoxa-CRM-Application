@@ -11,7 +11,7 @@ namespace Velnoxa.Domain.Entities
     {
         public Guid CompanyId { get; set; }  //Foreign Key para Company.
 
-        public Company Company { get; set; } = null;  //Navigation Property.
+        public Company Company { get; set; } = null!;  //Navigation Property.
 
         public string PhoneNumber { get; set; } = string.Empty;
 

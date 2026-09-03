@@ -1,0 +1,6 @@
+@Velnoxa.Api_HostAddress = http://localhost:5022
+
+GET {{Velnoxa.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

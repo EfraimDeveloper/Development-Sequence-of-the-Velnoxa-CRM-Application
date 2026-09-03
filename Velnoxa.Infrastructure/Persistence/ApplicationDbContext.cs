@@ -20,7 +20,7 @@ namespace Velnoxa.Infrastructure.Persistence
 
         public DbSet<Customer> Customers => Set<Customer>();
 
-        public DbSet<WhatsAppccount> whatsAppccounts {  get; set; }
+        public DbSet<WhatsAppccount> WhatsAppccounts {  get; set; }
 
     }
 }

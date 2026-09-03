@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ using Velnoxa.Infrastructure.Persistence;
 
 namespace Velnoxa.Infrastructure.Repositories
 {
-    public class WhatsAppAccountRepository:IwhatsAppAccountRepository
+    public class WhatsAppAccountRepository:IWhatsAppAccountRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -18,10 +19,20 @@ namespace Velnoxa.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task AddAsync (WhatsAppccount account)
+        public async Task AddAsync(WhatsAppccount account)
         {
-            await _context.whatsAppccounts.AddAsync(account);
+            await _context.WhatsAppccounts.AddAsync(account);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<WhatsAppccount>> GetAllAsync()
+        {
+           return await _context.WhatsAppccounts.ToListAsync();
+        }
+
+        public async Task<WhatsAppccount?> GetByIdAsync(Guid id)
+        {
+            return await _context.WhatsAppccounts.FirstOrDefaultAsync(x=> x.Id==id);
         }
     }
 }
