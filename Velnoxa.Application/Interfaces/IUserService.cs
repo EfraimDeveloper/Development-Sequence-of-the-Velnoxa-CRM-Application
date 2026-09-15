@@ -10,9 +10,9 @@ namespace Velnoxa.Application.Interfaces
 {
     public interface IUserService
     {
-            //Task<User> RegisterAsync(User user);
-            Task<User>RegisterAsync(RegisterUserDtos dto);
+           Task<User>RegisterAsync(RegisterUserDtos dto);
            Task<string?> LoginAsync(LoginUserDtos dto);
-        //Task<RegisterUserDtos?>LoginAsync(LoginUserDtos dto);
+        
+  
     }
 }

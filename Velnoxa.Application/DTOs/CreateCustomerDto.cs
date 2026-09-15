@@ -9,7 +9,6 @@ namespace Velnoxa.Application.DTOs
     public class CreateCustomerDto
     {
         public Guid CompanyId { get; set; }
-
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
 

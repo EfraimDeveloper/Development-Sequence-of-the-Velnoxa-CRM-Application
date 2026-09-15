@@ -25,18 +25,20 @@ public class UserService : IUserService
 
         var user = new User
         {
+            CompanyId = dto.CompanyId,
             FirstName = dto.FirstName,
             LastName = dto.LastName,
             Email = dto.Email,
             PasswordHash =BCrypt.Net.BCrypt.HashPassword(dto.Password), 
             IsActive = true
+
         };
 
         await _userRepository.AddAsync(user);
 
         return user;
     }
-    public async Task <string> LoginAsync(LoginUserDtos dto)
+    public async Task <string?> LoginAsync(LoginUserDtos dto)
     {
        var user= await _userRepository.GetByEmailAsync(dto.Email);
 
@@ -49,6 +51,6 @@ public class UserService : IUserService
         return _tokenService.GenerateToken(user);
 
     }
-
+        
 
 }

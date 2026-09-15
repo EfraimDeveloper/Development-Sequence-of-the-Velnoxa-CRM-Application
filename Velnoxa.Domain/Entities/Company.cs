@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Velnoxa.Domain.Common;
 using Velnoxa.Domain.Entities;
 
@@ -21,5 +20,5 @@ public class Company:AuditableEntity
 
     public ICollection<Customer> Customers { get; set; } = new List<Customer>(); //Navigation Property
 
-    public ICollection<WhatsAppccount> WhatsAppccounts { get; set; } = new List<WhatsAppccount>();
+    public ICollection<WhatsAppccount> WhatsAppccounts { get; set; } = new List<WhatsAppccount>(); //Navition property
 }
