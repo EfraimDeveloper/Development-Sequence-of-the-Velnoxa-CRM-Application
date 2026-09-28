@@ -20,7 +20,20 @@ namespace Velnoxa.Infrastructure.Persistence
 
         public DbSet<Customer> Customers => Set<Customer>();
 
+        public DbSet<Document> Documents => Set<Document>();
+
         public DbSet<WhatsAppccount> WhatsAppccounts {  get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Document>()
+                .HasOne(d => d.Company)
+                .WithMany(c => c.Documents)
+                .HasForeignKey(d => d.CompanyId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
 
     }
 }

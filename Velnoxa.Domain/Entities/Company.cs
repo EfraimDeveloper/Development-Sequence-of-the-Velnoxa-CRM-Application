@@ -21,4 +21,6 @@ public class Company:AuditableEntity
     public ICollection<Customer> Customers { get; set; } = new List<Customer>(); //Navigation Property
 
     public ICollection<WhatsAppccount> WhatsAppccounts { get; set; } = new List<WhatsAppccount>(); //Navition property
+
+    public ICollection<Document> Documents { get; set; } = new List<Document>(); //Navigation Property
 }
